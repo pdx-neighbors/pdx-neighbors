@@ -8,7 +8,7 @@ var Photo = function(imagepath, name, neighborhoods) { //object constructor for 
 var wakeboarding = new Photo("images/Activity/wakeboarding.jpg", "wakeboarding", [n, ne]);
 var snowboarding = new Photo("images/Activity/snowboarding.jpg", "snowboarding", [ne, se]); // consider replacing with horse shoeing
 var skiing = new Photo("images/Activity/skiing.jpg", "skiing", [nw, sw]);
-var hiking = new Photo("images/Activity/hiking.jpg", "hiking" [n, se, ne]);
+var hiking = new Photo("images/Activity/hiking.jpg", "hiking",   [n, se, ne]);
 
 var voodoo = new Photo("images/Donuts/voodoo.jpg", "voodoo", [sw, ne]);
 var bluestar = new Photo("images/Donuts/bluestar.jpg", "bluestar", [nw, se]);
@@ -30,7 +30,7 @@ var cocktails = new Photo("images/Drink/cocktails.jpg", "cocktails", [nw, sw]);
 var craftbeer = new Photo("images/Drink/craftbeer.jpg", "craftbeer", [ne, se]);
 
 var home = new Photo("images/Housing/home.jpg", "home", [ne, se, sw]);
-var condo = new Photo("images/Housing/condo.jpg", "condo" [nw, sw]);
+var condo = new Photo("images/Housing/condo.jpg", "condo", [nw, sw]);
 var boathouse = new Photo("images/Housing/boathouse.jpg", "boathouse", [n, nw]);
 
 var blazer = new Photo("images/Sports/blazer.gif", "blazer", [ne, se]);
