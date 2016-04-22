@@ -26,7 +26,7 @@ var club = new Photo("images/Night/club.jpg", "club", [nw, sw]);
 var bartender = new Photo("images/Night/bartender.jpg", "bartender", [se, ne]);
 
 var pabst = new Photo("images/Drink/pabst.jpg", "pabst", [n]);
-var cocktails = new Photo("images/Drink/ocktails.jpg", "cocktails", [nw, sw]);
+var cocktails = new Photo("images/Drink/cocktails.jpg", "cocktails", [nw, sw]);
 var craftbeer = new Photo("images/Drink/craftbeer.jpg", "craftbeer", [ne, se]);
 
 var home = new Photo("images/Housing/home.jpg", "home", [ne, se, sw]);
@@ -47,4 +47,4 @@ var bike = new Photo("images/Transportation/bike.jpg", "bike", [se, ne, nw]);
 var suit = new Photo("images/Person/suit.jpeg", "suit", [sw, nw]);
 var preppy = new Photo("images/Person/preppy.png", "preppy", [sw]);
 var nerd = new Photo("images/Person/nerd.png", "nerd", [ne, se, nw]);
-var hipster = new Photo("images/Person/hipster.jpg", "hipster", [n, ne]);
+var hipster = new Photo("images/Person/hip.jpg", "hipster", [n, ne]);
