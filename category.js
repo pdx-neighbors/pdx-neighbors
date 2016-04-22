@@ -15,21 +15,22 @@ var sports = new Category("sports", [blazer, thorns, timbers, winterhawks, hops]
 var active = new Category("active", [wakeboarding, hiking, skiing, snowboarding]);
 var drink = new Category("drink", [craftbeer, pabst, cocktails]);
 
-//TODO: make array that calls category
+
 
 function displayImage(category) {
-  document.getElementById('photos').innerHTML = "";
-  for (photo of category.photos){
-      document.getElementById('photos').innerHTML += "<img src="+photo.imagepath+">";
+  var imgContainer = document.getElementById('photos');  // get photo ID
+  imgContainer.innerHTML = "";
+  category.photos.forEach(function(photo){  // access photo
 
-      category.addEventListener("click", clickCounter);
-      displayImage(night);
-  }
+    var img = document.createElement("img"); // creating img tag
+    img.src = photo.imagepath;
+    img.addEventListener("click", function(){
+      photo.neighborhoods.forEach(function(neighborhood){  // access neighborhood
+        neighborhood.voteCount++;  // add count to neighborhood
+      });
+    });
+    imgContainer.appendChild(img); // adding image content into imgContainer
+  })
 
 }
 displayImage(night);
-//
-// function clickCounter() {
-//   category.count++;
-// }
-// clickCounter();
