@@ -17,6 +17,7 @@ categoryArray.push(new Category("active", [wakeboarding, hiking, skiing, snowboa
 categoryArray.push(new Category("drink", [craftbeer, pabst, cocktails]));
 
 var categoryIndex = 0; // start categoryIndex at zero
+var totalCount = 0;
 
 // Display Image function
 function displayImage(category) {
@@ -31,6 +32,14 @@ function displayImage(category) {
       console.log(photo);
       photo.neighborhoods.forEach(function(neighborhood){  // access neighborhood
         neighborhood.voteCount++;  // add count to neighborhood
+
+        totalCount++;
+        if(totalCount === 9 ) {
+          var resultButton = document.getElementById('photos').innerHTML; // reference to showResults
+          resultButton.addEventListener('click', goToResults); // event listener, click and run resultDisplay function
+
+        }
+
         });
 
         categoryIndex++;  // increment, to cycle
@@ -46,11 +55,13 @@ window.addEventListener("load", function() {
   var retrieve = localStorage.getItem('results');
   if (retrieve != null) {
     categoryArray = JSON.parse(retrieve);
-  //  Category = retrieve;
   }
-  // var retrieve = JSON.parse(localStorage.getItem('results'));
-  // console.log(retrieve);
-  // Category = retrieve;
 });
 
 displayImage(categoryArray[categoryIndex]);  // call displayImage to set image to index.hmtl
+
+
+function goToResults() {  // function when click on resultButton
+  if()
+  window.location.href = "resultsne.html", "_self";
+}

@@ -7,12 +7,21 @@
 </head>
 
 <body>
-    <div>
-    </div>
+    <div></div>
+    <form id="myForm">
+      <label for="userName">Name: </label>
+      <input type="text" id="userName"><br>
+
+      <label for="userEmail">Email: </label>
+      <input type="text" id="userEmail">
+
+      <input type="button" value="Find My Neighborhood" onclick="survey(this.form)">
+    </form>
+
     <script text="text/javascript" src="object.js"></script>
     <script text="text/javascript" src="neighborhoods.js"></script>
     <script text="text/javascript" src="photos.js"></script>
-    <script text="text/javascript" src="category.js"></script>
+    <!-- <script text="text/javascript" src="category.js"></script> -->
 </body>
 
 </html>
