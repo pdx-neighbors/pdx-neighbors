@@ -34,10 +34,23 @@ function displayImage(category) {
         });
 
         categoryIndex++;  // increment, to cycle
+        localStorage.setItem('results', JSON.stringify(categoryArray));
         displayImage(categoryArray[categoryIndex]);  // call displayImage function to load next category
 
     });
     imgContainer.appendChild(img); // adding image content into imgContainer
   })
 }
+
+window.addEventListener("load", function() {
+  var retrieve = localStorage.getItem('results');
+  if (retrieve != null) {
+    categoryArray = JSON.parse(retrieve);
+  //  Category = retrieve;
+  }
+  // var retrieve = JSON.parse(localStorage.getItem('results'));
+  // console.log(retrieve);
+  // Category = retrieve;
+});
+
 displayImage(categoryArray[categoryIndex]);  // call displayImage to set image to index.hmtl
