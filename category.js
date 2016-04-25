@@ -35,13 +35,6 @@ function displayImage(category) {
 
         neighborhood.voteCount++;  // add count to neighborhood
 
-        totalCount++;
-        if(totalCount === 9 ) {
-          var resultButton = document.getElementById('photos').innerHTML; // reference to showResults
-          resultButton.addEventListener('click', goToResults); // event listener, click and run resultDisplay function
-
-        }
-
 
         neighborhood.y++;  // add count to neighborhood
         chart.render();
@@ -50,13 +43,35 @@ function displayImage(category) {
 
         categoryIndex++;  // increment, to cycle
         localStorage.setItem('results', JSON.stringify(categoryArray));
-        displayImage(categoryArray[categoryIndex]);  // call displayImage function to load next category
+        totalCount++;
+        if (totalCount < categoryArray.length ) {
+          displayImage(categoryArray[categoryIndex]);  // call displayImage function to load next category
+          console.log(totalCount);
+
+            console.log('show result');
+
+        } else {
+        var button = document.getElementById('showResults');
+          button.className = "show";
+
+
+        }
+
+          // document.write("<input id="showResults" type="button" value="View Results" class="hidden" onClick="window.location.href = 'results.html', '_self'"");
+
+          // resultButton.setAttribute('class', ""); // reference to showResults
+          // resultButton.addEventListener('click', goToResults); // event listener, click and run resultDisplay function
+          // document.write("<input id="showResults" type="button" value="View Results" class="hidden" onClick="window.location.href = 'results.html', '_self'"");
+
+
 
     });
     imgContainer.appendChild(img); // adding image content into imgContainer
 
   })
 }
+
+var chart = null;
 
 window.addEventListener("load", function() {
   var retrieve = localStorage.getItem('results');
@@ -103,7 +118,9 @@ window.onload = function () {
 displayImage(categoryArray[categoryIndex]);  // call displayImage to set image to index.hmtl
 
 
-function goToResults() {  // function when click on resultButton
-  if()
-  window.location.href = "resultsne.html", "_self";
-}
+var button = document.getElementById('photos');
+// resultButton.addEventListener('click', resultEvent);
+//
+// function resultEvent() {  // function when click on resultButton
+//   document.getElementById('photos').setAttribute('class', ""); // get rid of hidden class
+// }

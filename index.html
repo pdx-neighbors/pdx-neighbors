@@ -2,26 +2,117 @@
 <html>
 
 <head>
-    <title>PDX Neighbors</title>
+    <title>PDX Neighbors - Main</title>
     <link type="text/css" rel="stylesheet" href="style.css">
-</head>
+    <link type="text/css" rel="stylesheet" href="css/skeleton.css">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'></head>
 
 <body>
-    <div></div>
-    <form id="myForm">
-      <label for="userName">Name: </label>
-      <input type="text" id="userName"><br>
 
-      <label for="userEmail">Email: </label>
-      <input type="text" id="userEmail">
 
-      <input type="button" value="Find My Neighborhood" onclick="survey(this.form)">
-    </form>
+    <div class="container navigation">
+      <div class="row">
+        <div class="six columns navtextlogo">
+            <a href="index.html">PDX NEIGHBORS</a>
+        </div>
+        <div class="six columns right navtext">
+            <a href="index.html">Home</a>
+            <a href="index2.html">What's Your Neighborhood?</a>
+            <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <video autoplay loop poster="video/Market.jpg" id="bgvid">
+            <source src="video/Market.mp4" type="video/mp4" />
+            <source src="video/Market.webm" type="video/webm" />
+        </video>
+        <h1 class="h1banner">PDX NEIGHBORS</h1>
+        <h5 class="h5banner">Your Portland neighborhood resource!</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="section about">
+    <div class="container">
+      <div class="row">
+        <div class="six columns  left">
+          <h1 class="orange">About PDX Neighbors</h1>
+          <p>Portland's really easy to navigate because, for the most part, it's laid out on a grid. The Willamette River divides the east and west sides of town, and Burnside Street splits it north and south. The result is that most of Portland lies within five quadrants: North, Northwest, Northeast, Southwest and Southeast.</p>
+          <p>Scroll a bit more towards the bottom to complete an image questionaire of where you should live in Portland.</p>
+        </div>
+        <div class="six columns ">
+          <img src="images/quadrant.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="section survey">
+  <div class="container">
+    <div class="row">
+      <div class="tweleve column">
+
+        <h1 class="white">Find Your Neighborhood</h1>
+        <br>
+        <form id="myForm">
+          <!-- <label for="userName" class="white">Name: </label> -->
+          <input type="text" id="userName" placeholder="Name:">
+          <!-- <label for="userEmail" class="white">Email: </label> -->
+          <input type="text" id="userEmail" placeholder="Email:">
+          <br><br>
+          <input type="button" class="button-primary" value="Find My Neighborhood" onclick="survey(this.form)">
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section about">
+
+    <div class="row">
+      <h1>Meet the PDX Neighbors Team</h1>
+    </div>
+    <div class="row">
+      <div class="three columns ">
+        <h6>Abby Burks</h6>
+      </div>
+      <div class="three columns  ">
+        <h6>Aaron Beerman</h6>
+      </div>
+      <div class="three columns  ">
+        <h6>Nicholle Romero</h6>
+      </div>
+      <div class="three columns  ">
+        <h6>Ivan Limongan</h6>
+      </div>
+    </div>
+
+</div>
+<div class="section footer">
+<div class="container">
+  <div class="row">
+    <div class="six columns left">
+      <p>Code 201 Project</p>
+    </div>
+    <div class="six columns right">
+      <p>Made in Portland</p>
+    </div>
+  </div>
+</div>
 
     <script text="text/javascript" src="object.js"></script>
     <script text="text/javascript" src="neighborhoods.js"></script>
     <script text="text/javascript" src="photos.js"></script>
     <!-- <script text="text/javascript" src="category.js"></script> -->
-</body>
-
+  </body>
 </html>

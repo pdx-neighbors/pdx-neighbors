@@ -1,3 +1,173 @@
 img {
   width:400px;
 }
+
+.hidden {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+
+.h1banner {
+  color: white;
+  font-size: 60px;
+  font-family: Abril Fatface, cursive;
+}
+
+.h2banner {
+  color: white;
+  font-size: 50px;
+}
+
+
+.h5banner {
+  color: white;
+  font-size: 20px;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.white {
+  color: #fff;
+}
+
+.orange {
+  color: #E65100;
+}
+
+.navigation {
+  top: 30px;
+  z-index: 1000;
+}
+
+.navtext a{
+  color: #E65100;
+  text-decoration: none;
+  margin-left: 25px;
+  transition: 0.3s all;
+}
+
+.navtext a:hover{
+  color: #B0BEC5;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #B0BEC5;
+}
+
+.navtextlogo a{
+  color: #E65100;
+  font-family: Abril Fatface, cursive;
+  text-decoration: none;
+  margin-left: 25px;
+  transition: 0.3s all;
+}
+
+.navtextlogo a:hover{
+  color: #B0BEC5;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #B0BEC5;
+}
+
+.about {
+  /*background-image: url('');
+  background-size: cover;*/
+  background: whitesmoke;
+  color: #000;
+  padding-bottom: 5rem;
+}
+
+
+.survey {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+    ), url('images/table.jpg');
+  background-size: cover;
+  /*background: whitesmoke;*/
+  color: #000;
+  padding-bottom: 5rem;
+}
+
+.footer {
+  background-color: whitesmoke;
+}
+
+
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .section {
+    padding: 12rem 0 11rem;
+  }
+
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+
+  .section {
+    padding: 14rem 0 15rem;
+  }
+
+  .section-description {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+  .section {
+    padding: 20rem 0 19rem;
+  }
+
+}
+
+
+
+
+/* Video */
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(video/Market.jpg) no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-device-width: 800px) {
+    html {
+         background: url(video/Market.jpg) #000 no-repeat center center fixed;
+    }
+    #bgvid {
+        display: none;
+    }
+}

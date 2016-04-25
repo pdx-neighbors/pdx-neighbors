@@ -12,3 +12,11 @@ var userRetrieve = localStorage.getItem('userData');
 if (userRetrieve != null) {
   getUserName = JSON.parse(userRetrieve);
 };
+
+
+
+
+//
+// window.addEventListener("load", function() {
+//
+// });

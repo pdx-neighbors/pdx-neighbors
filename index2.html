@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>PDX Neighbors</title>
+    <title>PDX Neighbors - Survey</title>
     <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 
@@ -11,7 +11,11 @@
       <img>
     </div>
 
-    <input id="showResults" type="button" value="View Results" class="hidden">
+    <div id="chartContainer" style="height: 300px; width: 100%;">
+    </div>
+    <input id="showResults" type="button" value="View Results" class="hidden" onClick="window.location.href = 'results.html', '_self'");
+
+
 
 
     <script text="text/javascript" src="object.js"></script>
@@ -19,10 +23,7 @@
     <script text="text/javascript" src="photos.js"></script>
     <script text="text/javascript" src="category.js"></script>
     <script type="text/javascript" src="http://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
-    <body>
-      <div id="chartContainer" style="height: 300px; width: 100%;">
-      </div>
-    </body>
+
 </body>
 
 </html>
