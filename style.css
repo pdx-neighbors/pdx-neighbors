@@ -10,7 +10,7 @@ img {
   visibility: visible;
 }
 
-
+/* Custom h styling */
 .h1banner {
   color: white;
   font-size: 60px;
@@ -22,12 +22,13 @@ img {
   font-size: 50px;
 }
 
-
 .h5banner {
   color: white;
   font-size: 20px;
 }
 
+
+/* Alignment */
 .right {
   text-align: right;
 }
@@ -36,6 +37,12 @@ img {
   text-align: left;
 }
 
+.center {
+  text-align: center;
+}
+
+
+/* Color */
 .white {
   color: #fff;
 }
@@ -44,6 +51,8 @@ img {
   color: #E65100;
 }
 
+
+/* Navigation Stuff */
 .navigation {
   top: 30px;
   z-index: 1000;
@@ -76,6 +85,8 @@ img {
   border-bottom: 1px solid #B0BEC5;
 }
 
+
+/* Custom sections */
 .about {
   /*background-image: url('');
   background-size: cover;*/
@@ -83,7 +94,6 @@ img {
   color: #000;
   padding-bottom: 5rem;
 }
-
 
 .survey {
   background-image: linear-gradient(
@@ -100,14 +110,9 @@ img {
   background-color: whitesmoke;
 }
 
-
 .section {
   padding: 8rem 0 7rem;
   text-align: center;
-}
-.section-heading,
-.section-description {
-  margin-bottom: 1.2rem;
 }
 
 
@@ -116,7 +121,6 @@ img {
   .section {
     padding: 12rem 0 11rem;
   }
-
 }
 
 /* Bigger than 750 */
@@ -125,13 +129,6 @@ img {
   .section {
     padding: 14rem 0 15rem;
   }
-
-  .section-description {
-    max-width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
 }
 
 /* Bigger than 1000 */
@@ -139,11 +136,7 @@ img {
   .section {
     padding: 20rem 0 19rem;
   }
-
 }
-
-
-
 
 /* Video */
 video#bgvid {
@@ -164,10 +157,10 @@ video#bgvid {
 }
 
 @media screen and (max-device-width: 800px) {
-    html {
-         background: url(video/Market.jpg) #000 no-repeat center center fixed;
-    }
-    #bgvid {
-        display: none;
-    }
+  html {
+    background: url(video/Market.jpg) #000 no-repeat center center fixed;
+  }
+  #bgvid {
+    display: none;
+  }
 }
