@@ -1,3 +1,4 @@
+// User Form function
 function survey(submittedForm) {
 
   var getUserName = document.getElementById("myForm").elements[0].value;
@@ -12,11 +13,3 @@ var userRetrieve = localStorage.getItem('userData');
 if (userRetrieve != null) {
   getUserName = JSON.parse(userRetrieve);
 };
-
-
-
-
-//
-// window.addEventListener("load", function() {
-//
-// });
