@@ -142,6 +142,13 @@ img {
     padding-right: 5px;
     width: 120px;
 }
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #E65100 !important;
+  text-decoration: underline;
+}
 .SElabel, .SEchoice {
     padding-bottom: 100px;
     color: white;
