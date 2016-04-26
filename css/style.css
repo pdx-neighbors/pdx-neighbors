@@ -87,6 +87,7 @@ img {
 .vertical {
     text-align: right;
     vertical-align: middle;
+
 }
 .survey {
     background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/table.jpg');
@@ -128,7 +129,7 @@ img {
     height: 380px;
 }
 .customSW {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/Tram-4.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url('../images/Tram-4.jpg');
     background-size: cover;
     /*background: whitesmoke;*/
     color: #000;
@@ -142,13 +143,7 @@ img {
     padding-right: 5px;
     width: 120px;
 }
-a {
-  text-decoration: none;
-}
-a:hover {
-  color: #E65100 !important;
-  text-decoration: underline;
-}
+
 .SElabel, .SEchoice {
     padding-bottom: 100px;
     color: white;
