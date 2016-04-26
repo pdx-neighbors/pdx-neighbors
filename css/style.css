@@ -10,6 +10,10 @@ img {
   visibility: visible;
 }
 
+.bubble {
+  padding: 5%;
+}
+
 /* Custom h styling */
 .h1banner {
   color: white;
@@ -56,6 +60,8 @@ img {
 .navigation {
   top: 30px;
   z-index: 1000;
+  border-bottom: 1px solid white;
+  padding-bottom: 20px!important;
 }
 
 .navtext a{
@@ -83,6 +89,33 @@ img {
   color: #B0BEC5;
   padding-bottom: 2px;
   border-bottom: 1px solid #B0BEC5;
+}
+
+.navtextfront a{
+  color: #fff;
+  text-decoration: none;
+  margin-left: 25px;
+  transition: 0.3s all;
+}
+
+.navtextfront a:hover{
+  color: #E65100;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #E65100;
+}
+
+.navtextlogofront a{
+  color: #fff;
+  font-family: Abril Fatface, cursive;
+  text-decoration: none;
+  margin-left: 25px;
+  transition: 0.3s all;
+}
+
+.navtextlogofront a:hover{
+  color: #E65100;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #E65100;
 }
 
 
@@ -116,7 +149,9 @@ img {
 }
 
 .footer {
-  background-color: whitesmoke;
+  background-color: lightgrey;
+  padding-top: 21px;
+  color: grey;
 }
 
 .section {
@@ -126,8 +161,16 @@ img {
 
 .teamImg {
   border-radius: 100%;
-  max-width: 100%;
+  max-width: 90%;
+  transition: 0.3s all;
 }
+
+.teamImg:hover {
+-webkit-box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.42);
+-moz-box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.42);
+box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.42);
+}
+
 
 /* Bigger than 550 */
 @media (min-width: 550px) {
@@ -147,7 +190,7 @@ img {
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
   .section {
-    padding: 20rem 0 19rem;
+    padding: 15rem 0;
   }
 }
 
@@ -171,7 +214,7 @@ video#bgvid {
 
 @media screen and (max-device-width: 800px) {
   html {
-    background: url(video/Market.jpg) #000 no-repeat center center fixed;
+    background: url(../video/Market.jpg) #000 no-repeat center center fixed;
   }
   #bgvid {
     display: none;
