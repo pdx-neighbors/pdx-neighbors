@@ -104,7 +104,7 @@ img {
     height: 380px;
 }
 .customSE {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/portland-841428_960_720.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/lower-burnside-hero.jpg');
     background-size: cover;
     /*background: whitesmoke;*/
     color: #000;
