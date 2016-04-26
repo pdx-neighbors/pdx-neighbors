@@ -99,7 +99,7 @@ img {
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.3),
     rgba(0, 0, 0, 0.3)
-    ), url('images/table.jpg');
+    ), url('../images/table.jpg');
   background-size: cover;
   /*background: whitesmoke;*/
   color: #000;
