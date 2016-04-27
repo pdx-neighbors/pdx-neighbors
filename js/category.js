@@ -26,6 +26,7 @@ function displayImage(category) {
   imgContainer.innerHTML = "";  // empty "" so image fills in the same 'photos' div
 
   category.photos.forEach(function(photo){  // access photo
+  //  var div = document.createElement("div"); //creating div tag
     var img = document.createElement("img"); // creating img tag
     img.src = photo.imagepath; // image source equal to photo imagepath
 
@@ -43,16 +44,20 @@ function displayImage(category) {
 
         categoryIndex++;  // increment, to cycle
         localStorage.setItem('results', JSON.stringify(categoryArray));
+        localStorage.setItem('neighborhoods', JSON.stringify(neighborhoodArray));
         totalCount++;
         if (totalCount < categoryArray.length ) {
           displayImage(categoryArray[categoryIndex]);  // call displayImage function to load next category
           console.log(totalCount);
+          console.log('show result');
 
-            console.log('show result');
+
 
         } else {
         var button = document.getElementById('showResults');
           button.className = "show";
+          var change = document.getElementById('photos');
+          change.id = 'endPhotos';
 
 
         }
