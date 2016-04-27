@@ -3,7 +3,6 @@ var Category = function(name, photos) { //object constructor for Category, refer
     this.name = name;
     this.photos = photos;
     this.count = 0;
-
 }
 
 var categoryArray = new Array ();
@@ -16,6 +15,8 @@ categoryArray.push(new Category("person", [hipster, suit, preppy, nerd]));
 categoryArray.push(new Category("sports", [blazer, thorns, timbers, winterhawks, hops]));
 categoryArray.push(new Category("active", [wakeboarding, hiking, skiing, snowboarding]));
 categoryArray.push(new Category("drink", [craftbeer, pabst, cocktails]));
+
+
 
 var categoryIndex = 0; // start categoryIndex at zero
 var totalCount = 0;
@@ -54,15 +55,20 @@ function displayImage(category) {
 
 
         } else {
-        var button = document.getElementById('showResults');
-          button.className = "show";
+
+       // var button = document.getElementById('showResults');
+         // button.className = "show";
           var change = document.getElementById('photos');
           change.id = 'endPhotos';
 
-
+          var button = document.getElementById('showResults');
+            button.className = "show";
+            button.addEventListener('click', function(){
+             neighborhoodArray.sort(nhCompare);
+             window.location.href = neighborhoodArray[0].resultsPage;
+           });
         }
 
-          // document.write("<input id="showResults" type="button" value="View Results" class="hidden" onClick="window.location.href = 'results.html', '_self'"");
 
           // resultButton.setAttribute('class', ""); // reference to showResults
           // resultButton.addEventListener('click', goToResults); // event listener, click and run resultDisplay function
@@ -120,8 +126,3 @@ window.onload = function () {
 displayImage(categoryArray[categoryIndex]);  // call displayImage to set image to index.hmtl
 
 var button = document.getElementById('photos');
-// resultButton.addEventListener('click', resultEvent);
-//
-// function resultEvent() {  // function when click on resultButton
-//   document.getElementById('photos').setAttribute('class', ""); // get rid of hidden class
-// }
