@@ -1,5 +1,19 @@
+.surveyImage {
+  clear: both;
+  margin-top: 50px !important;
+}
+
 img {
-  width:400px;
+  height:200px;
+  overflow: hidden;
+  padding: 5px;
+  text-align: center;
+  margin:auto;
+}
+
+#endPhotos{
+  visibility: hidden;
+  height: 1px;
 }
 
 .hidden {
