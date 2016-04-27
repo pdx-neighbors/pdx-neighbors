@@ -7,11 +7,11 @@ var Neighborhood = function(name, resultsPage) { //object constructor for neighb
 
 }
 
-var ne = new Neighborhood("Northeast", "resultsne.html");
-var se = new Neighborhood("Southeast", "resultsse.html");
-var nw = new Neighborhood("Northwest", "resultsnw.html");
-var sw = new Neighborhood("Southwest", "resultssw.html");
-var n = new Neighborhood("North", "resultsn.html");
+var ne = new Neighborhood("Northeast", "resultsNE.html");
+var se = new Neighborhood("Southeast", "resultsSE.html");
+var nw = new Neighborhood("Northwest", "resultsNW.html");
+var sw = new Neighborhood("Southwest", "resultsSW.html");
+var n = new Neighborhood("North", "resultsN.html");
 
 var neighborhoodArray = new Array ();
 neighborhoodArray.push(ne);
