@@ -9,7 +9,15 @@ function survey(submittedForm) {
 };
 
 
+
 var userRetrieve = localStorage.getItem('userData');
 if (userRetrieve != null) {
   getUserName = JSON.parse(userRetrieve);
 };
+
+
+//
+// var userRetrieve = localStorage.getItem('userData');
+// if (userRetrieve != null) {
+//   getUserName = JSON.parse(userRetrieve);
+// };
