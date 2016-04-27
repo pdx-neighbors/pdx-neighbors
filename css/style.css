@@ -75,6 +75,17 @@ img {
     border-bottom: 1px solid #B0BEC5;
 }
 
+.effects a {
+    color: #E65100;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s all;
+}
+.effects a:hover {
+    color: #B0BEC5;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #B0BEC5;
+}
 /* Custom sections */
 
 .about {

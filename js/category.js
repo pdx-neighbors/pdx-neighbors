@@ -63,8 +63,6 @@ function displayImage(category) {
           // resultButton.addEventListener('click', goToResults); // event listener, click and run resultDisplay function
           // document.write("<input id="showResults" type="button" value="View Results" class="hidden" onClick="window.location.href = 'results.html', '_self'"");
 
-
-
     });
     imgContainer.appendChild(img); // adding image content into imgContainer
 
@@ -114,9 +112,7 @@ window.onload = function () {
   chart.render();
 }
 
-
 displayImage(categoryArray[categoryIndex]);  // call displayImage to set image to index.hmtl
-
 
 var button = document.getElementById('photos');
 // resultButton.addEventListener('click', resultEvent);
