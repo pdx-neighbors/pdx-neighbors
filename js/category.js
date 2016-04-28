@@ -17,7 +17,6 @@ categoryArray.push(new Category("active", [wakeboarding, hiking, skiing, snowboa
 categoryArray.push(new Category("drink", [craftbeer, pabst, cocktails]));
 
 
-
 var categoryIndex = 0; // start categoryIndex at zero
 var totalCount = 0;
 
@@ -37,29 +36,35 @@ function displayImage(category) {
 
         neighborhood.voteCount++;  // add count to neighborhood
 
-
         neighborhood.y++;  // add count to neighborhood
         chart.render();
-
         });
 
         categoryIndex++;  // increment, to cycle
         localStorage.setItem('results', JSON.stringify(categoryArray));
         localStorage.setItem('neighborhoods', JSON.stringify(neighborhoodArray));
         totalCount++;
+
         if (totalCount < categoryArray.length ) {
           displayImage(categoryArray[categoryIndex]);  // call displayImage function to load next category
           console.log(totalCount);
           console.log('show result');
-
-
-
         } else {
-
        // var button = document.getElementById('showResults');
          // button.className = "show";
           var change = document.getElementById('photos');
           change.id = 'endPhotos';
+
+          var button2 = document.getElementById('clearButton');
+          button2.className = "show";
+          button2.addEventListener('click', function(){
+            localStorage.removeItem('results');
+            totalCount = 0;
+            var changeTwo = document.getElementById('endPhotos');
+            changeTwo.id = 'photos';
+            categoryIndex = 0;
+            displayImage(categoryArray[categoryIndex]);
+          });
 
           var button = document.getElementById('showResults');
             button.className = "show";
@@ -68,15 +73,8 @@ function displayImage(category) {
              window.location.href = neighborhoodArray[0].resultsPage;
            });
         }
-
-
-          // resultButton.setAttribute('class', ""); // reference to showResults
-          // resultButton.addEventListener('click', goToResults); // event listener, click and run resultDisplay function
-          // document.write("<input id="showResults" type="button" value="View Results" class="hidden" onClick="window.location.href = 'results.html', '_self'"");
-
     });
     imgContainer.appendChild(img); // adding image content into imgContainer
-
   })
 }
 

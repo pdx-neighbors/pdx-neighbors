@@ -15,6 +15,8 @@ if (userRetrieve != null) {
   getUserName = JSON.parse(userRetrieve);
 };
 
+document.getElementById('displayUserName').innerHTML = getUserName;
+
 
 //
 // var userRetrieve = localStorage.getItem('userData');
