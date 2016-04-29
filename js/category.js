@@ -1,5 +1,7 @@
 console.log('start');
-var Category = function(name, photos) { //object constructor for Category, referencing Photos constructor
+
+//object constructor for Category, referencing Photos constructor
+var Category = function(name, photos) {
     this.name = name;
     this.photos = photos;
     this.count = 0;
@@ -18,59 +20,55 @@ categoryArray.push(new Category("drink", [craftbeer, pabst, cocktails]));
 
 
 var categoryIndex = 0; // start categoryIndex at zero
-var totalCount = 0;
+var totalCount = 0; // start totalCount at zero
 
 // Display Image function
 function displayImage(category) {
   var imgContainer = document.getElementById('photos');  // get photo ID
   imgContainer.innerHTML = "";  // empty "" so image fills in the same 'photos' div
 
-  category.photos.forEach(function(photo){  // access photo
-  //  var div = document.createElement("div"); //creating div tag
+  category.photos.forEach(function(photo){  // access photo constructor
     var img = document.createElement("img"); // creating img tag
     img.src = photo.imagepath; // image source equal to photo imagepath
-
     img.addEventListener("click", function(){  // event listener to add neighborhood vote count when image is clicked
       console.log(photo);
-      photo.neighborhoods.forEach(function(neighborhood){  // access neighborhood
 
+      photo.neighborhoods.forEach(function(neighborhood){  // access neighborhood constructor
         neighborhood.voteCount++;  // add count to neighborhood
-
         neighborhood.y++;  // add count to neighborhood
         chart.render();
         });
 
         categoryIndex++;  // increment, to cycle
-        localStorage.setItem('results', JSON.stringify(categoryArray));
-        localStorage.setItem('neighborhoods', JSON.stringify(neighborhoodArray));
-        totalCount++;
+        localStorage.setItem('results', JSON.stringify(categoryArray));  // set local storage
+        localStorage.setItem('neighborhoods', JSON.stringify(neighborhoodArray));  // set local storage
+        totalCount++;  // increment totalCount
 
-        if (totalCount < categoryArray.length ) {
+        if (totalCount < categoryArray.length ) {  // compares count to totalCount
           displayImage(categoryArray[categoryIndex]);  // call displayImage function to load next category
           console.log(totalCount);
           console.log('show result');
         } else {
-       // var button = document.getElementById('showResults');
-         // button.className = "show";
           var change = document.getElementById('photos');
           change.id = 'endPhotos';
 
-          var button2 = document.getElementById('clearButton');
+          var button2 = document.getElementById('clearButton');  // clear button
           button2.className = "show";
           button2.addEventListener('click', function(){
-            localStorage.removeItem('results');
+            localStorage.removeItem('results', 'neighborhoods');  // remove local storage
+            window.location.reload();
             totalCount = 0;
             var changeTwo = document.getElementById('endPhotos');
             changeTwo.id = 'photos';
             categoryIndex = 0;
-            displayImage(categoryArray[categoryIndex]);
+            displayImage(categoryArray[categoryIndex]);  // call displayImage function within button2
           });
 
-          var button = document.getElementById('showResults');
-            button.className = "show";
-            button.addEventListener('click', function(){
-             neighborhoodArray.sort(nhCompare);
-             window.location.href = neighborhoodArray[0].resultsPage;
+          var button = document.getElementById('showResults');  // show results button
+          button.className = "show";
+          button.addEventListener('click', function(){
+          neighborhoodArray.sort(nhCompare);  // add sort function
+          window.location.href = neighborhoodArray[0].resultsPage;
            });
         }
     });
@@ -78,8 +76,9 @@ function displayImage(category) {
   })
 }
 
-var chart = null;
+var chart = null;  // set chart to null
 
+// window even listener to get local storage
 window.addEventListener("load", function() {
   var retrieve = localStorage.getItem('results');
   if (retrieve != null) {
@@ -87,8 +86,9 @@ window.addEventListener("load", function() {
   }
 });
 
-var chart = null;
+var chart = null; // set chart to null again
 
+// window onload chart function
 window.onload = function () {
   chart = new CanvasJS.Chart("chartContainer",
   {
@@ -123,4 +123,4 @@ window.onload = function () {
 
 displayImage(categoryArray[categoryIndex]);  // call displayImage to set image to index.hmtl
 
-var button = document.getElementById('photos');
+var button = document.getElementById('photos'); // get photos id

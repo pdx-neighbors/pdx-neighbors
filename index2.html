@@ -1,60 +1,46 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>PDX Neighbors - Survey</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/skeleton.css">
     <link type="text/css" rel="stylesheet" href="css/normalize.css">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'></head>
-
     <style>
       body {background-color: whitesmoke;}
     </style>
-</head>
+  </head>
 
-<body>
-  <div class="container navigation">
-    <div class="row">
-      <div class="six columns navtextlogo">
-          <a href="index.html">PDX NEIGHBORS</a>
-      </div>
-      <div class="six columns right navtext">
-          <a href="index.html">Home</a>
-          <a href="index2.html">What's Your Neighborhood?</a>
-          <a href="contact.html">Contact</a>
+  <body>
+    <div class="container navigation">
+      <div class="row">
+        <div class="six columns navtextlogo">
+            <a href="index.html">PDX NEIGHBORS</a>
+        </div>
+        <div class="six columns right navtext">
+            <a href="index.html">Home</a>
+            <a href="index2.html">What's Your Neighborhood?</a>
+        </div>
       </div>
     </div>
-  </div>
 
-
-
-<!--<head>
-    <title>PDX Neighbors - Survey</title>
-    <link type="text/css" rel="stylesheet" href="css/style.css">
-</head>-->
-
-<div class="container surveyImage center">
-    <div class="instructions"><b><h3>INSTRUCTIONS:</h3></b></div>
-    <div class="instructions"><h5>Click on the image that you relate to the most. This picture may be the one that depicts your "scene" or the one that sybolizes <em>you</em>.</h5></div>
-    <input id="clearButton" type="button" value="Clear Results &amp; Try Again" class="hidden button-primary">
-    <br>
-    <div id="photos" class="pix">
-      <img>
+    <div class="container surveyImage center">
+        <div class="instructions"><b><h3>INSTRUCTIONS:</h3></b></div>
+        <div class="instructions"><h5>Click on the image that you relate to the most. This picture may be the one that depicts your "scene" or the one that sybolizes <em>you</em>.</h5></div>
+          <input id="reloadButton" type="button" value="Take New Quiz" class="button-primary">
+          <br>
+          <input id="clearButton" type="button" value="Clear Results &amp; Try Again" class="hidden button-primary">
+          <br>
+        <div id="photos" class="pix">
+          <img>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
+    <div id="chartContainer" style="visibility: hidden"></div>
 
-  <div id="chartContainer" style="visibility: hidden">
-  </div>
-    <!-- <input id="showResults" type="button" value="View Results" class="hidden" onClick="window.location.href = 'results.html', '_self'")> -->
-
-    <!-- <div id="chartContainer" style="height: 300px; width: 100%;">
-    </div> -->
     <div class="container">
       <div class="row">
         <div class="tweleve column center">
@@ -63,15 +49,10 @@
       </div>
     </div>
 
-
-
-
     <script text="text/javascript" src="js/object.js"></script>
     <script text="text/javascript" src="js/neighborhoods.js"></script>
     <script text="text/javascript" src="js/photos.js"></script>
     <script text="text/javascript" src="js/category.js"></script>
     <script type="text/javascript" src="http://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
-
-</body>
-
+  </body>
 </html>

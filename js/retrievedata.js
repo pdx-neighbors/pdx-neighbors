@@ -1,14 +1,15 @@
+// window load event listener for chart for results page
 window.addEventListener("load", function() {
 
 var retrieve = localStorage.getItem('neighborhoods');
-if (retrieve != null) {
-  neighborhoodArray = JSON.parse(retrieve);
-}
-
+  if (retrieve != null) {
+    neighborhoodArray = JSON.parse(retrieve);
+  }
 });
 
 var chart = null;
 
+// chart function
 window.onload = function () {
   chart = new CanvasJS.Chart("chartContainer",
   {
