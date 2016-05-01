@@ -45,6 +45,6 @@ var trimet = new Photo("images/Transportation/trimet.jpg", "trimet", [n, ne, nw,
 var bike = new Photo("images/Transportation/bike.jpg", "bike", [se, ne, nw]);
 
 var suit = new Photo("images/Person/suit.jpeg", "suit", [sw, nw]);
-var preppy = new Photo("images/Person/preppy.png", "preppy", [sw]);
+var preppy = new Photo("images/Person/Preppy.png", "preppy", [sw]);
 var nerd = new Photo("images/Person/nerd.png", "nerd", [ne, se, nw]);
 var hipster = new Photo("images/Person/hip.jpg", "hipster", [n, ne]);
